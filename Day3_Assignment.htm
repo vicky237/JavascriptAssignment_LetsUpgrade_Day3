@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment</title>
+    <style>
+        h3{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h3>Question 1</h3>
+            <p>Take a number from a user and write a function which checks whether the number is even or odd. Assign the
+                result to a variable and log that variable in the console. </p>
+            <h4>Answer</h4>
+            <pre><code>
+                let getUserValue = prompt('Enter the value');
+                getUserValue = Number(getUserValue);
+        
+                let varFunction = function (getUserValue) {
+        
+                    if (getUserValue % 2 != 0)
+                        console.log(`The given number ${getUserValue} is Odd `)
+                    else
+                        console.log(`The given number ${getUserValue} is Even `)
+        
+                }
+                varFunction(getUserValue);
+            </code></pre>
+        </div>
+        <div>
+            <h3>Question 2</h3>
+            <p>
+                Write a program which will take OS name and version from the user separated by a space. Then log the OS
+                name and version on the console.
+            </p>
+            <h4>Answer</h4>
+            <pre><code>
+                let getOSName = prompt('Enter the Os Name and its version with space');
+                let arrayGetUser = (getOSName.split(' '));
+                console.log(` The OS name is ${arrayGetUser[0]}  and version is ${arrayGetUser[1]}  `)
+            </code></pre>
+        </div>
+        <div>
+            <h3>Question 3</h3>
+            <p>Write a program to take marks as input from the user and grade him accordingly. Use Conditional
+                statements. Also the same code using switch or ternary
+
+            </p>
+            <h4>Answer</h4>
+            <pre><code>
+                let userMark = prompt('Enter the mark ');
+                userMark = Number(userMark);
+                let gradeUser ;
+        
+                if (userMark >= 50 && userMark <= 75)
+                gradeUser = 'C';
+               else  if (userMark > 75 && userMark <= 95)
+                gradeUser = 'B';
+                else if(userMark >95)
+                gradeUser = 'A';
+                else
+                gradeUser = 'D';
+                 
+        
+                (userMark >= 50 && userMark <= 75) ? ( gradeUser = 'C' ) :(userMark > 75 && userMark <= 95) ? gradeUser = 'B': (userMark >95)?gradeUser = 'A':
+                gradeUser = 'D';
+                console.log(`Marks are ${userMark} and grade is ${gradeUser}  `);
+            </code></pre>
+        </div>
+    </main>
+    <script>
+        //First Question
+        let getUserValue = prompt('Enter the value for check odd or even');
+        getUserValue = Number(getUserValue);
+
+        let varFunction = function (getUserValue) {
+
+            if (getUserValue % 2 != 0)
+                console.log(`The number entered is ${getUserValue} and Number is odd `)
+            else
+                console.log(`The number entered is ${getUserValue} and Number is Even `)
+
+        }
+        varFunction(getUserValue);
+
+        //Second Question
+        let getOSName = prompt('Enter the Os Name and its version with space');
+        let arrayGetUser = (getOSName.split(' '));
+        console.log(` The OS name is ${arrayGetUser[0]}  and version is ${arrayGetUser[1]}  `)
+
+        //Third Question   
+        let userMark = prompt('Enter the mark ');
+        userMark = Number(userMark);
+        let gradeUser ;
+
+        if (userMark >= 50 && userMark <= 75)
+        gradeUser = 'C';
+       else  if (userMark > 75 && userMark <= 95)
+        gradeUser = 'B';
+        else if(userMark >95)
+        gradeUser = 'A';
+        else
+        gradeUser = 'D';
+
+        (userMark >= 50 && userMark <= 75) ? ( gradeUser = 'C' ) :(userMark > 75 && userMark <= 95) ? gradeUser = 'B': (userMark >95)?gradeUser = 'A':
+        gradeUser = 'D';
+        console.log(`Marks are ${userMark} and grade is ${gradeUser}  `);
+
+    </script>
+</body>
+
+</html>
